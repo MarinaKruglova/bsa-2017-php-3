@@ -10,10 +10,13 @@ class UsersPresenter
     {
         $this->repository = $repository;
     }
-
     public function getOrderedByLastName(): array
     {
-        // TODO: implement with ascending sort
-        return [];
+        $users = $this->repository->getAll();
+        usort($users, function($a, $b)
+        {
+            return $a['last_name'] <=> $b['last_name'];
+        });
+        return $users;
     }
 }
