@@ -1,8 +1,28 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace BinaryStudioAcademy\Task1;
 
+
 class Calculator
 {
-    //TODO: implement all methods. See methods' names in test
+    public function add(int $a, int $b): int
+    {
+        return $a + $b;
+    }
+    public function subtract(int $a, int $b): int
+    {
+        return $a - $b;
+    }
+    public function multiply(int $a, int $b): int
+    {
+        return $a * $b;
+    }
+    public function divide(int $a, int $b): int
+    {
+        return intdiv($a, $b);
+    }
+    public function pow2(int $a): int
+    {
+        return pow(2, $a);
+    }
 }
